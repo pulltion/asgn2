@@ -33,10 +33,15 @@ import asgn2Restaurant.PizzaRestaurant;
  * You can also use this class and asgn2Wizards.PizzaWizard to test your system as a whole
  * 
  * 
- * @author Person A and Person B
+ * @author Kihoon Seo n8998949 and Yoon Kim n9818901
  *
  */
 public class PizzaGUI extends javax.swing.JFrame implements Runnable, ActionListener {
+	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -2541561335797821429L;
 	
 	private JFrame frame;
 	ArrayList<String> pizza = new ArrayList<String>();
@@ -63,14 +68,12 @@ public class PizzaGUI extends javax.swing.JFrame implements Runnable, ActionList
 	private JTextArea distance;
 	
 	//create buttons
-	
 	private JButton loadFile;
 	private JButton displayLogs;
 	private JButton displayTotal;
 	private JButton reset;
 	
 	//scrollable panes to display information of customers and pizzas
-	
 	JScrollPane customerScroll;
 	JScrollPane pizzaScroll;
 	
@@ -86,6 +89,7 @@ public class PizzaGUI extends javax.swing.JFrame implements Runnable, ActionList
 	@Override
 	public void actionPerformed(ActionEvent a){
 		Object button = a.getSource();
+		logChooser.setCurrentDirectory(new File("/Users/kanchiho/Documents/QUT/2017-1/CAB302/assignment2/source/asgn2/logs/"));
 		if(button==loadFile){
 			int returnVal = logChooser.showOpenDialog(this);
 			if(returnVal==JFileChooser.APPROVE_OPTION){
@@ -93,7 +97,8 @@ public class PizzaGUI extends javax.swing.JFrame implements Runnable, ActionList
 				System.out.println("Log file "+ logFile.getName()+" was selected");
 				//if valid file was selected, process the log file and read lines
 				try{
-					String filename = logFile.getAbsolutePath();
+//					String filename = logFile.getAbsolutePath();
+					String filename = "logs/" + logFile.getName();
 					System.out.println(filename);
 					if(restaurant.processLog(filename)){
 						loadLogs();
@@ -120,6 +125,8 @@ public class PizzaGUI extends javax.swing.JFrame implements Runnable, ActionList
 			reset();
 			customers.setText("");
 			pizzas.setText("");
+			distance.setText("");
+			profit.setText("");
 		}
 		
 		

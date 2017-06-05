@@ -8,7 +8,7 @@ import asgn2Exceptions.CustomerException;
  * The classes are instantiated from one of the three valid customer codes outlined in
  * Section 5.3 of the Assignment Specification. Any other code will throw a CustomerException.   
  *     
- * @author Person B
+ * @author Yoon Kim n9818901
  *
  */
 
@@ -35,7 +35,7 @@ public class CustomerFactory {
 		else if(customerCode.equals("DNC")){
 			return new DroneDeliveryCustomer(name,mobileNumber,locationX,locationY);
 		}
-		else if(customerCode.equals("")){
+		else if(customerCode.equals("PUC")){
 			return new PickUpCustomer(name,mobileNumber,locationX,locationY);
 		}
 		else{

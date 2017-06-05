@@ -20,7 +20,7 @@ import asgn2Pizzas.PizzaFactory;
  * return Pizza and Customer object - either as an individual Pizza/Customer
  * object or as an ArrayList of Pizza/Customer objects.
  * 
- * @author Person A and Person B
+ * @author Kihoon Seo n8998949 and Yoon Kim n9818901
  *
  */
 public class LogHandler {
@@ -49,7 +49,7 @@ public class LogHandler {
 		// TO DO
 		BufferedReader br;
 		ArrayList<Customer> customerList = new ArrayList<Customer>();
-		String line;
+		String line = new String();
 
 		// Read lines from the input file
 		try {
@@ -124,6 +124,7 @@ public class LogHandler {
 	 */
 	public static Customer createCustomer(String line) throws CustomerException, LogHandlerException {
 		// TO DO
+		
 		String[] index;
 
 		// Read values from the lines, separated by commas
@@ -186,18 +187,6 @@ public class LogHandler {
 		} catch (Exception e) {
 			throw new LogHandlerException("" + e);
 		}
-
-		// String[] pizzaStr = line.split(",");
-		// LocalTime orderTime = LocalTime.parse(pizzaStr[0],
-		// DateTimeFormatter.ofPattern("HH:mm:ss"));
-		// LocalTime deliveryTime = LocalTime.parse(pizzaStr[1],
-		// DateTimeFormatter.ofPattern("HH:mm:ss"));
-		// String pizzaCode = pizzaStr[7];
-		// int quantity = Integer.parseInt(pizzaStr[8]);
-		//
-		// Pizza pizza = PizzaFactory.getPizza(pizzaCode, quantity, orderTime,
-		// deliveryTime);
-		// return pizza;
 
 		/////////////////////////////////////
 	}

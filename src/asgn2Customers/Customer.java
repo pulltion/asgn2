@@ -8,7 +8,7 @@ import asgn2Exceptions.CustomerException;
  *  the abstract method getDeliveryDistance. A description of the class's
  * fields and their constraints is provided in Section 5.2 of the Assignment Specification.  
  * 
- * @author Person B
+ * @author Yoon Kim n9818901
 */
 public abstract class Customer {
 	String name, mobileNumber, type;
@@ -32,19 +32,19 @@ public abstract class Customer {
 	 * 
 	 */
 	public Customer(String name, String mobileNumber, int locationX, int locationY, String type) throws CustomerException{
-		if(this.name.length()<1||this.name.length()>20){
+		if(name.length() < 1 || name.length() > 20){
 			throw new CustomerException("Customer name is either too long or too short");
 		}
-		if(this.mobileNumber.length()!=10){
+		if(mobileNumber.length() != 10){
 			throw new CustomerException("The mobile number must be 10 digits long");
 		}
-		if(!this.mobileNumber.startsWith("0")){
+		if(!mobileNumber.startsWith("0")){
 			throw new CustomerException("The mobile number must start with 0");
 		}
-		if(this.name.replaceAll(" ", "").equals("")){
+		if(name.replaceAll(" ", "").equals("")){
 			throw new CustomerException("The name cannot be only white spaces");
 		}
-		if(this.mobileNumber.replaceAll("\\d", "").equals("")){
+		if(!mobileNumber.replaceAll("\\d", "").equals("")){
 			throw new CustomerException("The mobile number must be in digits");
 		}
 		

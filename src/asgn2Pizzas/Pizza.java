@@ -11,7 +11,7 @@ import asgn2Exceptions.PizzaException;
  * toppings. A description of the class's fields and their constraints is
  * provided in Section 5.1 of the Assignment Specification.
  * 
- * @author Person A
+ * @author Kihoon Seo n8998949
  *
  */
 public abstract class Pizza {

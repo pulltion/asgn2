@@ -19,7 +19,7 @@ import asgn2Pizzas.Pizza;
  * Any exceptions raised by one of the methods called by this class should be
  * passed to asgn2GUIs.PizzaGUI so that it can be shown to the user.
  * 
- * @author Person A and Person B
+ * @author Kihoon Seo n8998949 and Yoon Kim n9818901
  *
  */
 public class PizzaRestaurant {
@@ -39,10 +39,8 @@ public class PizzaRestaurant {
 	 */
 	public PizzaRestaurant() {
 		// TO DO
-
 		this.customers = new ArrayList<Customer>();
 		this.pizzas = new ArrayList<Pizza>();
-
 	}
 
 	/**
@@ -83,9 +81,9 @@ public class PizzaRestaurant {
 		// TO DO
 		try {
 			this.customers = LogHandler.populateCustomerDataset(filename);
+			this.pizzas = LogHandler.populatePizzaDataset(filename);
 		} catch (Exception e) {
-			this.customers = new ArrayList<Customer>();
-			this.pizzas = new ArrayList<Pizza>();
+			resetDetails();
 			throw e;
 		}
 		return true;
@@ -199,7 +197,7 @@ public class PizzaRestaurant {
 		// TO DO
 		////////////////
 		customers = new ArrayList<Customer>();
-		pizzas = new ArrayList<Pizza>();
+		pizzas.clear();
 		////////////////
 	}
 
