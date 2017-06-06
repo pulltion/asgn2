@@ -227,14 +227,6 @@ public abstract class Pizza {
 
 		return false;
 
-		// CHEESE(1),
-		// TOMATO(0.5),
-		// BACON(1.5),
-		// SALAMI(1),
-		// PEPPERONI(1),
-		// CAPSICUM(1.2),
-		// MUSHROOM(2),
-		// EGGPLANT(0.8);
 	}
 
 	/**

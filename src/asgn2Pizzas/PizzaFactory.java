@@ -35,7 +35,7 @@ public class PizzaFactory {
 		Pizza pizza;
 		
 		if (!pizzaCode.equals("PZM") && !pizzaCode.equals("PZV") && !pizzaCode.equals("PZL")) {
-			throw new PizzaException("Pizzaocde is invalid");
+			throw new PizzaException("Pizza code is invalid");
 		}		
 		
 		if (pizzaCode.equals("PZM")) {

@@ -89,7 +89,6 @@ public class PizzaGUI extends javax.swing.JFrame implements Runnable, ActionList
 	@Override
 	public void actionPerformed(ActionEvent a){
 		Object button = a.getSource();
-		logChooser.setCurrentDirectory(new File("/Users/kanchiho/Documents/QUT/2017-1/CAB302/assignment2/source/asgn2/logs/"));
 		if(button==loadFile){
 			int returnVal = logChooser.showOpenDialog(this);
 			if(returnVal==JFileChooser.APPROVE_OPTION){

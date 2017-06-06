@@ -85,7 +85,6 @@ public class LogHandler {
 	public static ArrayList<Pizza> populatePizzaDataset(String filename) throws PizzaException, LogHandlerException {
 		// TO DO
 		////////////////////////////////////////
-
 		BufferedReader br;
 		ArrayList<Pizza> pizzaList = new ArrayList<Pizza>();
 		String line;
@@ -101,7 +100,6 @@ public class LogHandler {
 			throw new LogHandlerException("" + e);
 		}
 		return pizzaList;
-
 		////////////////////////////////////////
 	}
 
@@ -175,7 +173,7 @@ public class LogHandler {
 			throw new LogHandlerException("" + e);
 		}
 
-		// Return values and create customers
+		// Return values and create pizza
 		try {
 			LocalTime orderTime = LocalTime.parse(pizzaStr[0], DateTimeFormatter.ofPattern("HH:mm:ss"));
 			LocalTime deliveryTime = LocalTime.parse(pizzaStr[1], DateTimeFormatter.ofPattern("HH:mm:ss"));
