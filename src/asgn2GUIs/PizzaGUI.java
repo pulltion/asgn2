@@ -97,7 +97,7 @@ public class PizzaGUI extends javax.swing.JFrame implements Runnable, ActionList
 				//if valid file was selected, process the log file and read lines
 				try{
 //					String filename = logFile.getAbsolutePath();
-					String filename = "logs/" + logFile.getName();
+					String filename = ".//logs/" + logFile.getName();
 					System.out.println(filename);
 					if(restaurant.processLog(filename)){
 						loadLogs();

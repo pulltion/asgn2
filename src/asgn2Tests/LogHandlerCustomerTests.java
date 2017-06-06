@@ -24,7 +24,7 @@ public class LogHandlerCustomerTests {
 	@Before
 	public void populateCustomerDataset(){
 		try{
-			customerList = LogHandler.populateCustomerDataset("./logs/20170101.txt");
+			customerList = LogHandler.populateCustomerDataset(".//logs/20170101.txt");
 		} catch(CustomerException | LogHandlerException e){
 			//TODO Auto-generated catch block
 			e.printStackTrace();

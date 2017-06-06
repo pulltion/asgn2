@@ -26,7 +26,7 @@ public class LogHandlerPizzaTests {
 		@Before
 		public void populatePizzaDataset(){
 				try {
-					pizzaList = LogHandler.populatePizzaDataset("./logs/20170101.txt");
+					pizzaList = LogHandler.populatePizzaDataset(".//logs/20170101.txt");
 				} catch (PizzaException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();

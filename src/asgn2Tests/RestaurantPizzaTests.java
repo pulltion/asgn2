@@ -26,7 +26,7 @@ public class RestaurantPizzaTests {
 	@Before
 	public void populatePizza() {
 		try {
-			restaurant.processLog("./logs/20170101.txt");
+			restaurant.processLog(".//logs/20170101.txt");
 		} catch (PizzaException | LogHandlerException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

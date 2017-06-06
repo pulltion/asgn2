@@ -22,7 +22,6 @@ public abstract class Customer {
 	 *  
   	 * <P> PRE: True
   	 * <P> POST: All field values are set
-  	 * @param what is up
 	 * @param name - The Customer's name 
 	 * @param mobileNumber - The customer mobile number
 	 * @param locationX - The customer x location relative to the Pizza Palace Restaurant measured in units of 'blocks' 

@@ -23,7 +23,7 @@ public class RestaurantCustomerTests {
 	@Before
 	public void populateCustomer(){
 		try{
-			restaurant.processLog("./logs/20170101.txt");
+			restaurant.processLog(".//logs/20170101.txt");
 		} catch(CustomerException|LogHandlerException e){
 			//TODO Auto-generated catch block
 			e.printStackTrace();
