@@ -18,7 +18,7 @@ import asgn2Exceptions.PizzaException;
  * Note that an instance of asgn2Pizzas.MeatLoversPizza should be used to test the functionality of the 
  * asgn2Pizzas.Pizza abstract class. 
  * 
- * @author Person B
+ * @author Yoon Kim n9818901
  *
  */
 public class PizzaTests {
